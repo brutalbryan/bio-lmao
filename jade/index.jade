@@ -1,0 +1,24 @@
+extends ../layouts/layout.jade
+include ../includes/mixins.jade
+
+block headContent
+		title Jade Playground
+
+
+block bodyContent
+
+		h1 My title
+		p(class='myP', id='myPID') This is a paragraph, as well!
+
+		form(action='', method='POST')
+
+			+formText('firstName', 'First Name:')
+
+			+formText('lastName', 'Last Name:')
+
+			label(for='myList') Occupation:
+			select(id='myList', name='myList')
+				option(value='Designer') Designer
+				option(value='Coder') Coder
+
+			input(type='button', value='Submit')
